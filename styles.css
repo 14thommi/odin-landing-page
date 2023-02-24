@@ -1,0 +1,46 @@
+* {
+    /*all: initial;*/
+    margin: 0;
+    padding: 0;
+    border: 1px dotted red;
+    box-sizing: border-box;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    /* set font-size relative elements to base 10 (ie em, rem) */
+    font-size: 62.5%;
+}
+
+/* HEADER STYLES */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    min-height: 7.2rem;
+}
+
+header .content-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    min-width: 50rem;
+
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #F9FAF8;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: #E5E7EB;
+}
