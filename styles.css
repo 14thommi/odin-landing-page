@@ -1,8 +1,19 @@
+:root {
+    --dark-blue: #1F2937;
+    --white: #F9FAF8;
+    --light-gray: #E5E7EB;
+    --light-blue: #3882F6;
+    --font-extra-large: 4.8rem;
+    --font-large: 3.6rem;
+    --font-medium: 2.4rem;
+    --font-small: 1.8rem;
+}
+
 * {
     /*all: initial;*/
     margin: 0;
     padding: 0;
-    border: 1px dotted red;
+    /*border: 1px dotted red;*/
     box-sizing: border-box;
     color: black;
     font-family: "Roboto", sans-serif;
@@ -10,28 +21,124 @@
     font-size: 62.5%;
 }
 
+
+/* FONT STYLES */
+/* size */
+.font-small {
+    font-size: var(--font-small);
+}
+
+.font-medium {
+    font-size: var(--font-medium);
+}
+
+.font-large {
+    font-size: var(--font-large);
+}
+
+.font-extra-large {
+    font-size: var(--font-extra-large);
+}
+
+/* color */
+.white {
+    color: var(--white);
+}
+
+.light-gray {
+    color: var(--light-gray);
+}
+
+.dark-blue {
+    color: var(--dark-blue);
+}
+
+/* styles */
+.bold {
+    font-weight: 700;
+}
+
+.italics {
+    font-style: italic;
+}
+
+/* text alignment */
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+
+/* GENERAL STYLES */
+/* section styles (background color) */
+#section-1,
+#section-2,
+#section-4,
+#section-5 {
+    display: flex;
+    justify-content: center;
+}
+
+header,
+footer {
+    min-height: calc(var(--font-medium) * 3);
+}
+
+section {
+    height: 40rem;
+}
+
+.content-width {
+    width: 70%;
+    min-width: 50rem;
+}
+
+/* section background-color */
+.section-dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.section-light-blue {
+    background-color: var(--light-blue);
+}
+
+.section-white {
+    background-color: var(--white);
+}
+
+.section-light-gray {
+    background-color: var(--light-gray);
+}
+
+/* element attributes */
+.round-corner {
+    border-radius: 0.9rem;
+}
+
+ button {
+    width: 15rem;
+    height: calc(var(--font-small) * 2);
+ }
+
+
 /* HEADER STYLES */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1F2937;
-    min-height: 7.2rem;
 }
 
 header .content-width {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
-    min-width: 50rem;
-
-}
-
-.logo {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #F9FAF8;
 }
 
 nav {
@@ -40,7 +147,121 @@ nav {
     gap: 3rem;
 }
 
-nav a {
-    font-size: 1.8rem;
-    color: #E5E7EB;
+a {
+    text-decoration: none;
+}
+
+
+/* SECTION 1 STYLES */
+#section-1 .content-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+}
+
+.hero-text-left {
+    display: flex;
+    flex-direction: column;
+
+    height: 60%;
+    gap: var(--font-small);
+    width: 50%;
+}
+
+.hero-image-right {
+    display: flex;
+    height: 60%;
+    width: 50%;
+}
+
+img {
+    
+    margin: 0 auto;
+}
+
+.hero-button {
+    flex: 0 0 auto;
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: none;
+}
+
+
+/* SECTION 2 STYLES */
+#section-2 .content-width {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: calc(var(--font-medium));
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--font-large) * 1.5);
+}
+
+.carousel-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-block-image {
+    width: 16rem;
+    height: 16rem;
+    border: 0.25rem solid var(--light-blue);
+}
+
+.carousel-block-text {
+    width: 16rem;
+    height: auto;
+    color: var(--dark-blue);
+    font-size: var(--font-small);
+}
+
+
+/* SECTION 3 STYLES */
+#section-3 .content-width {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+
+/* SECTION 4 STYLES */
+#section-4 .content-width {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10rem 0;
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-button {
+    color: var(--white);
+    font-size: var(--font-small);
+    border: 2px solid var(--white);
+}
+
+
+/* FOOTER STYLES */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
